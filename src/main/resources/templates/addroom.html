@@ -9,6 +9,7 @@
 
 <div class="container">
 <form th:action="@{/saveroom}" th:object="${room}" method="post">
+    <input type="hidden" th:field="*{id}">
     <div class="form-group col-md-6">
         <label for="address" th:text="'Address'"></label>
         <input type="text" class="form-control" th:field="*{address}">

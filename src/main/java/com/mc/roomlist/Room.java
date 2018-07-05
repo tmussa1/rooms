@@ -19,6 +19,7 @@ public class Room {
     private boolean wifi;
     private String cable;
     private boolean bathroom;
+    private boolean privatetrue;
 
     public long getId() {
         return id;
@@ -109,5 +110,11 @@ public class Room {
         this.cable = cable;
     }
 
+    public boolean isPrivatetrue() {
+        return privatetrue;
+    }
 
+    public void setPrivatetrue(boolean privatetrue) {
+        this.privatetrue = privatetrue;
+    }
 }

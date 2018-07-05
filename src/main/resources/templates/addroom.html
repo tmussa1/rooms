@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="www.thymeleaf.org">
+<html lang="en" xmlns:th="www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
 <head>
     <meta charset="UTF-8">
     <title>Add Room</title>
@@ -49,6 +49,10 @@
     <div class="form-group col-md-6">
         <label for="bathroom" th:text="'Bathroom'"></label>
         <input type="checkbox" class="form-control" th:field="*{bathroom}" value="true">
+    </div>
+    <div class="form-group col-md-6" sec:authorize="hasAuthority('ADMIN')">
+        <label for="privatetrue" th:text="'Private'"></label>
+        <input type="checkbox" class="form-control" th:field="*{privatetrue}" th:checked="${privatetrue}">
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
